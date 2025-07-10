@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  nodeapp:
+    build:
+      context: .   # Contexto de build é o diretório atual, serve para pegarmos o Dockerfile e o package.json para buildar
+      dockerfile: Dockerfile # Especificando o Dockerfile a ser usado
+      args:
+        - VERSION=V1.2.0 # Passando uma variável de ambiente para o Dockerfile
+    container_name: nodeapp
+    environment:
+      - PORT=5000
+    ports:
+      - "5000:5000" # Expondo a porta 5000 do container na porta 5000 do host

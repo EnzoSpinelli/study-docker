@@ -1,0 +1,36 @@
+Utilizaremos uma API do Docker ( docker api reference )
+Iremos pegar os eventos dos containers do Docker
+
+
+
+
+Por padrão o Docker roda na porta 2375:
+ss -lnp | grep 2375
+
+
+No caso, pode ser que há um docker.sock ( que seria o socket de comunicação do Docker) -- Provavelmente no /var/run
+
+Caso não ache, podemos achar via : ss -a | grep 34892
+
+_______________________
+
+python sdk docker ( no primeiro link temos a Library SDK para o Python )
+
+__________________________
+
+Para editar o Docker, precisamos editar o arquivo de serviço dele:
+sudo fin /usr -iname docker.service
+sudo vim /usr/..../docker.service
+
+Após dar o vim, teremos a aba de SERVICE, o qual terá o ExecStart:
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=........
+Iremos adicionar um novo parâmetro para podermos fazer conectividade via porta tcp:
+ExecStart=/usr/bin/dockerd -H fd:// -H tcp://o.o.o.o:2375 --containerd=........
+
+
+Como modificamos um arquivo do serviço, precisamos dar um daemon reload:
+sudo systemctl daemon-reload
+sudo system restart docker
+
+E para verificarmos para ver se deu certo:
+sudo ss -lnp | grep 2375

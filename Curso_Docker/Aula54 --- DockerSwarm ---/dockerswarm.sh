@@ -1,0 +1,1 @@
+DockerSwarm é um orquestrador de containers que permite gerenciar um cluster de Docker hosts, facilitando a implantação, o gerenciamento e a escalabilidade de aplicações em contêineres.

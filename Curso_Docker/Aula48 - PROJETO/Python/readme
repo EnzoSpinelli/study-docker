@@ -1,0 +1,32 @@
+Para começarmos precisamos ter um Virtual Environment ( ambiente virtual), iremos no terminal do projeto python e digitar:
+1.python -m venv .venv 
+
+
+2.Para entrarmos no ambiente virtual:
+Powershell: . .\.venv\Scripts\activate.ps1
+Bash: source ./.venv/scripts/activate
+
+3.pip install docker
+
+4.Criando o script.. ( Criando até a linha 12... Dará erro ao executarmos o script pois não sei onde ta o socket de comunicação )
+
+5. Formatando para JSON :
+Entra no google e digita: JSON Formatter
+
+6.Queremos extrair o ID do Container, o tempo e o nome
+
+7.Para deixar o tempo bonitinho, vamos dar uma googlada..."python epoch to datetime":
+Usaremos a lib datetime
+
+
+8.Integrando com o Discord com POST...
+Utilizaremos o weebhook do discord;
+No google: discord webhook APi references
+Utilizaremos a lib Requests do python
+
+9.Entra no Discord, vai no chat que quer q tenha os alertas, vai em integrações e Webhooks ( e copia a URL do webhook )
+
+
+
+for i in `seq 5`; do docker run -d nginx; done; docker stop `docker ps -q`
+nohup python3 -u scanner.py > scanner.log 2>&1 &
