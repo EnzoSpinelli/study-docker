@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 DockerSwarm é um orquestrador de containers que permite gerenciar um cluster de Docker hosts, facilitando a implantação, o gerenciamento e a escalabilidade de aplicações em contêineres.
 
 
@@ -17,3 +18,6 @@ vantagens:
 3) Gerenciamento centralizado
 4) Self-healing (se um container morrer, ele é reiniciado automaticamente)
 5) Load balancing (distribuição de carga entre containers)
+=======
+DockerSwarm é um orquestrador de containers que permite gerenciar um cluster de Docker hosts, facilitando a implantação, o gerenciamento e a escalabilidade de aplicações em contêineres.
+>>>>>>> f57481e32922df59ff21e976acee48068d77b0da
