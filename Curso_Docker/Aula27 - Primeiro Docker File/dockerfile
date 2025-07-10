@@ -1,0 +1,14 @@
+FROM node:versao
+# Use uma imagem base do Node.js
+LABEL maintainer="Seu Nome" 
+# Significa que o mantenedor da imagem é "Seu Nome"
+RUN mkdir /var/node
+# Cria um diretório chamado /var/node dentro do contêiner
+WORKDIR /var/node
+# Define o diretório de trabalho dentro do contêiner como /var/node, o qual seria o diretório atual para os próximos comandos
+COPY app.js
+# Copia o arquivo app.js do diretório atual do HOST para o diretório de trabalho dentro do contêiner
+EXPOSE 3000
+# Expõe a porta 3000 do contêiner, permitindo que seja acessada externamente, o qual aparece no docker ps em PORTS
+CMD ["node", "app.js"]
+# Define o comando padrão a ser executado quando o contêiner for iniciado, neste caso, executa o arquivo app.js usando o Node.js, quando executarmos um RUN ele executa o comando e cria uma camada, mas o CMD não cria uma camada, ele apenas define o comando que será executado quando o contêiner for iniciado

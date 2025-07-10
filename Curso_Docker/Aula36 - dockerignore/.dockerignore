@@ -1,0 +1,2 @@
+**/*.py ( isso faz com que dentro do diretório e sub-diretório, ao buildar o dockerfile, não levara nenhum arquivo .py)
+dockerfile.python

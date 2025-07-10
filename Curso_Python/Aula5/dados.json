@@ -1,0 +1,26 @@
+[
+    {
+        "nome_completo": "Enzo T. S.",
+        "sobrenome": "T. S.",
+        "idade": 21,
+        "ano_nascimento": 2004,
+        "maior_de_idade": true,
+        "altura_metros": 170.0
+    },
+    {
+        "nome_completo": "Maria P. T. S",
+        "sobrenome": "P. T. S",
+        "idade": 55,
+        "ano_nascimento": 1970,
+        "maior_de_idade": true,
+        "altura_metros": 1.55
+    },
+    {
+        "nome_completo": "Guilherme C. C.",
+        "sobrenome": "C. C.",
+        "idade": 29,
+        "ano_nascimento": 1996,
+        "maior_de_idade": true,
+        "altura_metros": 1.85
+    }
+]

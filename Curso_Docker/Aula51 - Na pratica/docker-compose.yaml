@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  frontend:
+    container_name: frontend
+    image: nginx
+    ports:
+      - "8080:80" # Expondo a porta 80 do container na porta 8080 do host
